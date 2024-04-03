@@ -1,0 +1,6 @@
+@OperacoesMatematicasAPI_HostAddress = http://localhost:5097
+
+GET {{OperacoesMatematicasAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
