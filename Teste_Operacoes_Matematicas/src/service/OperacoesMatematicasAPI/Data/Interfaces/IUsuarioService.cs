@@ -1,4 +1,5 @@
-﻿using OperacoesMatematicasAPI.Models.Request;
+﻿using OperacoesMatematicasAPI.Data.Table;
+using OperacoesMatematicasAPI.Models.Request;
 using OperacoesMatematicasAPI.Models.Response;
 
 namespace OperacoesMatematicasAPI.Data.Interfaces
@@ -9,5 +10,7 @@ namespace OperacoesMatematicasAPI.Data.Interfaces
         Task<UsuarioResponse> UsuarioPorIdAsync(int id);
         Task AtualizarUsuarioAsync(AtualizarUsuarioRequest atualizarUsuarioRequest);
         Task DeletarUsuarioAsync(int id);
+        Task<TbUsuario> ObterPorEmailSenhaAsync(string email, string senha);
+        Task<string> GerarTokenAsync(TbUsuario usuario);
     }
 }

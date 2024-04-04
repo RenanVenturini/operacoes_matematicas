@@ -8,7 +8,7 @@ namespace OperacoesMatematicasAPI.Data
     {
         public OperacoesMatematicasContext(DbContextOptions<OperacoesMatematicasContext> options) : base(options) { }
 
-        public DbSet<TbUsuario> Usuario { get; set; }
+        public DbSet<TbUsuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -8,5 +8,6 @@ namespace OperacoesMatematicasAPI.Data.Interfaces
         Task<TbUsuario> UsuarioPorIdAsync(int id);
         Task AtualizarUsuarioAsync(TbUsuario usuario);
         Task DeletarUsuarioAsync(TbUsuario usuario);
+        Task<TbUsuario> ObterPorEmailSenhaAsync(string email, string senha);
     }
 }
