@@ -8,5 +8,7 @@ namespace OperacoesMatematicasAPI.Models.Request
         public string Nome { get; set; }
         [Required(ErrorMessage = "O campo {0} é obrigatorio")]
         public string Senha { get; set; }
+        [Required(ErrorMessage = "O campo {0} é obrigatorio")]
+        public string Email { get; set; }
     }
 }

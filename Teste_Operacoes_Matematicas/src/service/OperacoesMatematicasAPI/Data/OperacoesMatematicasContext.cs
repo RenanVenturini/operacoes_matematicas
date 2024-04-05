@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OperacoesMatematicasAPI.Data.Table;
 using System.Reflection;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OperacoesMatematicasAPI.Data
 {

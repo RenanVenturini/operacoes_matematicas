@@ -18,24 +18,10 @@ namespace OperacoesMatematicasAPI.Data.Repository
             await _context.Usuarios.AddAsync(usuario);
             await _context.SaveChangesAsync();
         }
-        public async Task<TbUsuario> UsuarioPorIdAsync(int id)
-            => await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id);
-        public async Task AtualizarUsuarioAsync(TbUsuario usuario)
+        public async Task<TbUsuario> ObterUsuarioAsync(string username, string senha)
         {
-            _context.Usuarios.Update(usuario);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeletarUsuarioAsync(TbUsuario usuario)
-        {
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync();
-        }
-        public async Task<TbUsuario> ObterPorEmailSenhaAsync(string email, string senha)
-        {
-            return await _context.Usuarios
-              .Where(u => u.Email == email && u.Senha == senha)
-              .FirstOrDefaultAsync();
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(u => u.Nome == username && u.Senha == senha);
+            return usuario;
         }
     }
 }
